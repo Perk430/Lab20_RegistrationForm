@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Lab20_RegistrationForm.Models;
+
 namespace Lab20_RegistrationForm.Controllers
 {
     public class HomeController : Controller
@@ -35,13 +37,14 @@ namespace Lab20_RegistrationForm.Controllers
             return View();
         }
 
-        public ActionResult AddUser(string FirstName)
+        public ActionResult AddUser(UserInfo NewUser)
         {
-            //code to add user
-            string fName = FirstName;
-            ViewBag.FirstName = fName;
+            //validation!!!!
 
-            return View();
+            //to add the data from the model to the database
+            
+            //pass the NewUser model to the AddUser view
+            return View(NewUser); 
         }
     }
 }
