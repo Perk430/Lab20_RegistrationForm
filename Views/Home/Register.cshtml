@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Please fill the form to register!</h1>
+
+<form action="/Home/AddUser">
+    First Name: <input type="text" name="John" /><br />
+     Last Name: <input type="text" name="Adams" /><br />
+         Email: <input type="text" name="text" /><br />
+  Phone Number: <input type="text" name="y" /><br />
+      Password: <input type="text" name="x" /><br />
+
+    <button onclick="AddUser">Registration</button>
+</form>
