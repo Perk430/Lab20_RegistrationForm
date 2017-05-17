@@ -51,3 +51,7 @@ c:\users\perk\documents\visual studio 2015\Projects\Lab20_RegistrationForm\Lab20
 c:\users\perk\documents\visual studio 2015\Projects\Lab20_RegistrationForm\Lab20_RegistrationForm\obj\Debug\Lab20_RegistrationForm.csprojResolveAssemblyReference.cache
 c:\users\perk\documents\visual studio 2015\Projects\Lab20_RegistrationForm\Lab20_RegistrationForm\obj\Debug\Lab20_RegistrationForm.dll
 c:\users\perk\documents\visual studio 2015\Projects\Lab20_RegistrationForm\Lab20_RegistrationForm\obj\Debug\Lab20_RegistrationForm.pdb
+C:\Users\Perk\documents\visual studio 2015\Projects\Lab20_RegistrationForm\Lab20_RegistrationForm\bin\EntityFramework.dll
+C:\Users\Perk\documents\visual studio 2015\Projects\Lab20_RegistrationForm\Lab20_RegistrationForm\bin\EntityFramework.SqlServer.dll
+C:\Users\Perk\documents\visual studio 2015\Projects\Lab20_RegistrationForm\Lab20_RegistrationForm\bin\EntityFramework.xml
+C:\Users\Perk\documents\visual studio 2015\Projects\Lab20_RegistrationForm\Lab20_RegistrationForm\bin\EntityFramework.SqlServer.xml

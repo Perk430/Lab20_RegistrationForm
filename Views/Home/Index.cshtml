@@ -3,5 +3,22 @@
 }
 
 
-<h2>Welcome to Grand Circus COFFEE Register!</h2>
+<center><h2>Welcome to Grand Circus COFFEE Register!</h2></center>
 
+<br />
+<br />
+
+<center>
+    <table border="1">
+        <tr><th>Item</th><th>Description</th><th>Quantity</th><th>Price</th></tr>
+        @foreach (var element in ViewBag.ItemInfo)
+        {
+            <tr>
+                <td>@element.ItemName</td>
+                <td>@element.Description</td>
+                <td>@element.Quantity</td>
+                <td>@element.ItemPrice</td>
+            </tr>
+        }
+    </table>
+</center>

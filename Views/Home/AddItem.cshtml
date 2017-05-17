@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "AddItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="SaveNewItem" method="post">
+
+
+    <style>
+        label {
+            width: 150px;
+            display: inline-block;
+            text-align: left;
+            vertical-align: bottom;
+            font-family: Verdana;
+        }
+
+        labelTwo {
+            width: 211px;
+            display: inline-block;
+            text-align: left;
+            vertical-align: bottom;
+            font-family: Verdana;
+        }
+
+        body {
+            background-color: deepskyblue;
+        }
+    </style>
+    <h2> AddItem</h2>
+    <h1> Add a new Item</h1>
+    <br />
+    <br />
+
+    <form action="/Home/AddItem">
+        <label> Item Name:</label><input type="text" name="ItemName" /><br />
+        <br />
+        <label> Description:</label><input type="text" name="Description" /> <br />
+        <br />
+        <label> Quantity:</label><input type="text" name="Quantity" /> <br />
+        <br />
+        <label> Price:</label><input type="text" name="ItemPrice" /> <br />
+        <br />
+        <button onclick="AddItem"> Save</button>
+    </form>
+    </form>

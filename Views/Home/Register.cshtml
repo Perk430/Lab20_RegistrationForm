@@ -4,14 +4,37 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Please fill the form to register!</h1>
+<!--Adding a little style to the Register page-->
+<style>
+    label {
+        width: 150px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
 
-<form action="/Home/AddUser">
-    First Name: <input type="text" name="UFirstName" /><br />
-     Last Name: <input type="text" name="ULastName" /><br />
-         Email: <input type="text" name="UEmail" /><br />
-  Phone Number: <input type="text" name="UPhone" /><br />
-      Password: <input type="text" name="UPassword" /><br />
+    labelTwo {
+        width: 211px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
 
-    <button onclick="AddUser">Registration</button>
-</form>
+    body {
+        background-color: deepskyblue;
+    }
+    </style>
+    <h1 > Please fill the form to register!</h1 >
+    <!-- Creating the data boxes and "Register button on the form. -->
+
+ <form action="/Home/AddUser"> 
+     <label> First Name:</label><input type="text" name="UFirstName" /> <br /> 
+     <label>Last Name:</label> <input type="text" name="ULastName" /> <br /> 
+     <label>Email:</label> <input type="text" name="UEmail" /> <br /> 
+     <label>Phone Number:</label> <input type="text" name="UPhone" /> <br /> 
+     <label>Password:</label> <input type="text" name="UPassword" /> <br /> 
+    
+    <button onclick="AddUser" >Click to Register</button > 
+ </form >
