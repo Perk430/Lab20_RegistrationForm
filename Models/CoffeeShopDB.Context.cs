@@ -13,10 +13,10 @@ namespace Lab20_RegistrationForm.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CoffeeShopDBEntities : DbContext
+    public partial class CoffeeShopDBEntities: DbContext
     {
         public CoffeeShopDBEntities()
-            : base("name=CoffeeShopDBEntities")
+            : base("name=CoffeeShopDBEntities1")
         {
         }
     

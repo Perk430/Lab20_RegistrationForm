@@ -3,16 +3,13 @@
   <EntityType Name="Item">
     <Key>
       <PropertyRef Name="ItemName" />
-      <PropertyRef Name="ItemPrice" />
-      <PropertyRef Name="Description" />
-      <PropertyRef Name="Quantity" />
     </Key>
     <Property Name="ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ItemPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Quantity" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="CoffeeShopDBEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="CoffeeShopDBEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Items" EntityType="Self.Item" />
   </EntityContainer>
 </Schema>

@@ -1,10 +1,12 @@
 ﻿
+
+@model Lab20_RegistrationForm.Models.Item
 @{
     ViewBag.Title = "AddItem";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<form action="SaveNewItem" method="post">
+
 
 
     <style>
@@ -33,7 +35,7 @@
     <br />
     <br />
 
-    <form action="/Home/AddItem">
+    <form action="/Home/SaveNewItem">
         <label> Item Name:</label><input type="text" name="ItemName" /><br />
         <br />
         <label> Description:</label><input type="text" name="Description" /> <br />
@@ -44,4 +46,4 @@
         <br />
         <button onclick="AddItem"> Save</button>
     </form>
-    </form>
+   

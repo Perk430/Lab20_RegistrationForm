@@ -4,6 +4,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web.Mvc;
 using Lab20_RegistrationForm.Models;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json.Linq;
 
 namespace Lab20_RegistrationForm.Controllers
 {
@@ -14,6 +17,7 @@ namespace Lab20_RegistrationForm.Controllers
             CoffeeShopDBEntities DB = new CoffeeShopDBEntities();
             List<Item> ItemInfo = DB.Items.ToList();
             ViewBag.ItemInfo = ItemInfo;
+            ViewBag.RandomQuote = GetRandomQuote();
             return View();
         }
 
@@ -95,7 +99,7 @@ namespace Lab20_RegistrationForm.Controllers
 
             DB.SaveChanges();
 
-            return RedirectToAction("ListAllItems");
+            return RedirectToAction("Index");
         }
 
         public ActionResult SaveUpdates(Item ToBeUpdated)
@@ -103,6 +107,8 @@ namespace Lab20_RegistrationForm.Controllers
             CoffeeShopDBEntities DB = new CoffeeShopDBEntities();
             //find the original customer record
             Item ToFind = DB.Items.Find(ToBeUpdated.ItemName);
+
+            ToFind.ItemName = ToBeUpdated.ItemName;
 
             ToFind.Description = ToBeUpdated.Description;
 
@@ -113,6 +119,32 @@ namespace Lab20_RegistrationForm.Controllers
             DB.SaveChanges();
 
             return RedirectToAction("ListAllItems");
+        }
+
+        public string GetRandomQuote()
+        {
+            HttpWebRequest request = WebRequest.CreateHttp("https://andruxnet-random-famous-quotes.p.mashape.com/");
+
+            //request.UserAgent = @"User-Agent: Mozilla/5.0(Windows NT 10.0; WOW64)AppleWebKit/537.36(KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36";
+
+
+            //add a key to your API call
+            request.Headers.Add("X-Mashape-Key", "lfnQbQxPMimshpxyU980WGjDgykep1VmM3PjsnKpJVgNJyPhZh");//Key given by website
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.Accept = "application/json";
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            StreamReader rd = new StreamReader(response.GetResponseStream());
+
+            string data = rd.ReadToEnd(); //raw format
+
+            JObject RandomQuote = JObject.Parse(data);
+
+            //ViewBag.Message = WeatherData["productionCenter"];
+            //ViewBag.Message = WeatherData["location"]["timezone"];
+
+            return RandomQuote["quote"].ToString();
         }
     }
 }
